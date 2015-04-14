@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DesignationDefs>
+  <DesignationDef>
+    <defName>SmoothWalls</defName>
+    <graphicPath>UI/Overlays/Designations/SmoothFloor</graphicPath>
+    <targetType>Cell</targetType>
+  </DesignationDef>
+</DesignationDefs>

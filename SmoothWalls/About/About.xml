@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>SmoothWalls</name>
+  <author>Tomas Persson (Foley)</author>
+  <url>https://github.com/bitope/Rimworld-mods</url>
+  <targetVersion>Alpha 9</targetVersion>
+  <description>Adds the ability to "Smooth walls" the same way as smooth floor.</description>
+</ModMetaData>

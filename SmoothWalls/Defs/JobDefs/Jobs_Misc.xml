@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<JobDefs>
+  <JobDef>
+    <defName>SmoothWalls</defName>
+    <driverClass>JobDriver_SmoothWall</driverClass>
+    <reportString>Smoothing wall.</reportString>
+  </JobDef>
+</JobDefs>

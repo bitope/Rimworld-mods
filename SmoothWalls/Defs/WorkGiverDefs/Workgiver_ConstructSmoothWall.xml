@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<WorkGivers>
+
+ <WorkGiverDef>
+    <defName>SmoothWalls</defName>
+    <giverClass>WorkGiver_ConstructSmoothWall</giverClass>
+    <workType>Construction</workType>
+    <priorityInType>8</priorityInType>
+    <verb>smooth</verb>
+    <gerund>smoothing</gerund>
+    <scanThings>false</scanThings>
+    <scanCells>true</scanCells>
+    <requiredActivities>
+      <li>Manipulation</li>
+    </requiredActivities>
+  </WorkGiverDef>
+
+</WorkGivers>
