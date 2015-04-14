@@ -45,6 +45,12 @@ namespace RimWorld
                 toil.AddFinishAction(() =>
                                      {
                                          var stuff = "Blocks"+ MineUtility.MineableInCell(TargetLocA).def.defName;
+                                         if (stuff == "BlocksMineableSteel") stuff = "Steel";
+                                         if (stuff == "BlocksMineableSilver") stuff = "Silver";
+                                         if (stuff == "BlocksMineableGold") stuff = "Gold";
+                                         if (stuff == "BlocksMineableUranium") stuff = "Uranium";
+                                         if (stuff == "BlocksMineablePlasteel") stuff = "Plasteel";
+
                                          var stuffDef = DefDatabase<ThingDef>.GetNamed(stuff);
 
                                          MineUtility.MineableInCell(TargetLocA).Destroy();
