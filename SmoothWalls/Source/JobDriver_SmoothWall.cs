@@ -16,6 +16,9 @@ namespace RimWorld
 
 	    protected override IEnumerable<Toil> MakeNewToils()
 	    {
+	        float skill = this.pawn.skills.AverageOfRelevantSkillsFor(WorkTypeDefOf.Construction);
+	        double skillMod = 1.0/Math.Exp(skill/20.0);
+
             yield return Toils_Reserve.Reserve(TargetIndex.A, ReservationType.Total);
 
 	        {
@@ -35,7 +38,7 @@ namespace RimWorld
             {
                 Toil toil = new Toil();
                 toil.defaultCompleteMode = ToilCompleteMode.Delay;
-                toil.defaultDuration = 650; 
+                toil.defaultDuration = (int)(650*skillMod); 
 
                 toil.AddPreTickAction(() =>
                                       {
@@ -44,14 +47,12 @@ namespace RimWorld
 
                 toil.AddFinishAction(() =>
                                      {
-                                         var stuff = "Blocks"+ MineUtility.MineableInCell(TargetLocA).def.defName;
-                                         if (stuff == "BlocksMineableSteel") stuff = "Steel";
-                                         if (stuff == "BlocksMineableSilver") stuff = "Silver";
-                                         if (stuff == "BlocksMineableGold") stuff = "Gold";
-                                         if (stuff == "BlocksMineableUranium") stuff = "Uranium";
-                                         if (stuff == "BlocksMineablePlasteel") stuff = "Plasteel";
-
-                                         var stuffDef = DefDatabase<ThingDef>.GetNamed(stuff);
+                                         var stuffName = MineUtility.MineableInCell(TargetLocA).def.defName;
+                                         if (stuffName.StartsWith("Mineable"))
+                                             stuffName = stuffName.Replace("Mineable", "");
+                                         else
+                                             stuffName = "Blocks" + stuffName;
+                                         var stuffDef = DefDatabase<ThingDef>.GetNamed(stuffName);
 
                                          MineUtility.MineableInCell(TargetLocA).Destroy();
 
@@ -63,7 +64,6 @@ namespace RimWorld
                 toil.AddFinishAction(()=>Find.DesignationManager.RemoveAllDesignationsAt(TargetLocA));
                 yield return toil;
             }
-	       
 	    }
 
 	    public override void ExposeData()
