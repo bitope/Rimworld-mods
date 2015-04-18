@@ -39,9 +39,8 @@ namespace RimWorld
 			this.hotKey = KeyBindingDefOf.Misc1;
 		}
 
-		public override AcceptanceReport CanDesignateAt(IntVec3 c)
-		{
-
+        public override AcceptanceReport CanDesignateCell(IntVec3 c)
+        {
             if (!c.InBounds())
             {
                 return false;
@@ -70,8 +69,8 @@ namespace RimWorld
             return AcceptanceReport.WasAccepted;
 		}
 
-		public override void DesignateSingle(IntVec3 c)
-		{
+        public override void DesignateSingleCell(IntVec3 c)
+        {
             Find.DesignationManager.AddDesignation(new Designation(c, DefDatabase<DesignationDef>.GetNamed("SmoothWalls")));
 		}
 

@@ -37,10 +37,6 @@ namespace RimWorld
                     this.reinjectTime = 0f;
 
                     var ordersTab = DefDatabase<DesignationCategoryDef>.GetNamed("Orders");
-                    //foreach (var tab in ordersTab.specialDesignatorClasses)
-                    //{
-                    //    Log.Message(tab.Name);
-                    //}
 
                     if (ordersTab.specialDesignatorClasses.All(i => i.Name != "Designator_SmoothWalls"))
                     {
@@ -52,6 +48,7 @@ namespace RimWorld
                 }
             }
         }
+
         public void Start()
         {
             this.OnLevelWasLoaded(-1);
