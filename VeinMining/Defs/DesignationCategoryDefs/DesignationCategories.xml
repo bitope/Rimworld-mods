@@ -11,8 +11,8 @@
       <li>Designator_Cancel</li>
       <li>Designator_Deconstruct</li>
       <li>Designator_Mine</li>
-<li>Rimworld.Designator_VeinMining</li>      
-<li>Designator_Haul</li>
+	  <li>Rimworld.Designator_VeinMining</li>      
+	  <li>Designator_Haul</li>
       <li>Designator_PlantsCut</li>
       <li>Designator_PlantsHarvest</li>
       <li>Designator_PlantsHarvestWood</li>
