@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{714E8323-8CD1-4FA5-8255-6042545A9DCF}</ProjectGuid>
+    <ProjectGuid>{E3D35963-9574-443A-A11B-EB6EA0C7E6C3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SmoothWalls</RootNamespace>
-    <AssemblyName>SmoothWalls</AssemblyName>
+    <RootNamespace>VeinMining</RootNamespace>
+    <AssemblyName>VeinMining</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,32 +31,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Assembly-CSharp, Version=0.9.5532.29361, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Assembly-CSharp">
       <HintPath>J:\Games\RimWorld\RimWorld778Win_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>J:\Games\RimWorld\RimWorld778Win_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="UnityEngine">
       <HintPath>J:\Games\RimWorld\RimWorld778Win_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SmoothWalls_ComponentInjectorBehavior.cs" />
-    <Compile Include="Designator_SmoothWalls.cs" />
-    <Compile Include="JobDriver_SmoothWall.cs" />
+    <Compile Include="Designator_VeinMining.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SmoothWalls_ComponentInjector.cs" />
-    <Compile Include="WorkGiver_ConstructSmoothWall.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy "$(TargetDir)\SmoothWalls.dll"  "$(ProjectDir)\..\Assemblies"</PostBuildEvent>
+    <PostBuildEvent>copy "$(TargetDir)\VeinMining.dll"  "$(ProjectDir)\..\..\Assemblies"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
