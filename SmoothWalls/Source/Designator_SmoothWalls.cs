@@ -31,7 +31,8 @@ namespace RimWorld
 
 		    this.defaultLabel = "Smooth walls";
 			this.defaultDesc = "Smooth the rough walls.";
-			this.icon = ContentFinder<Texture2D>.Get("UI/Designators/SmoothFloor", true);
+			//this.icon = ContentFinder<Texture2D>.Get("UI/Designators/SmoothFloor", true);
+            this.icon = ContentFinder<Texture2D>.Get("SmoothWalls", true);
 			this.useMouseIcon = true;
 			this.soundDragSustain = SoundDefOf.DesignateDragStandard;
 			this.soundDragChanged = SoundDefOf.DesignateDragStandardChanged;
